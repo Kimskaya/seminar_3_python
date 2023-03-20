@@ -12,14 +12,14 @@
 #    12
 englishAlphabet = 'qwertyuiopasdfghjklzxcvbnm'
 russianAlphabet = 'йцукенгшщзхъфывапролджэячсмитьбюё'
-list_English_Alphabet = {1:'AEIOULNSTR', 2:'DG', 3:'BCMP',4:'FHVWY', 5:"K" , 8:'JX', 10:'QZ'}
-list_Russian_Alphabet  = {1:'АВЕИНОРСТ', 2:'ДКЛМПУ', 3:'БГЁЬЯ',4:'ЙЫ', 5:'ЖЗХЦЧ', 8:'ШЭЮ', 10:'ФШЪ'}
+dict_English_Alphabet = {1:'AEIOULNSTR', 2:'DG', 3:'BCMP',4:'FHVWY', 5:"K" , 8:'JX', 10:'QZ'}
+dict_Russian_Alphabet  = {1:'АВЕИНОРСТ', 2:'ДКЛМПУ', 3:'БГЁЬЯ',4:'ЙЫ', 5:'ЖЗХЦЧ', 8:'ШЭЮ', 10:'ФШЪ'}
 
 newWord = str(input("Input a word in Russian or in English    "))
 wordValue = 0
 if newWord[0].lower() in englishAlphabet:
      for letter in newWord:
-         for key, value in list_English_Alphabet.items():
+         for key, value in dict_English_Alphabet.items():
              if letter.upper() in value:
                  wordValue += key
      print("The value of your word is ",wordValue)
@@ -27,7 +27,7 @@ else:
      if newWord[0].lower() in russianAlphabet: 
          for letter in newWord:
 
-             for key, value in list_Russian_Alphabet.items():
+             for key, value in dict_Russian_Alphabet.items():
                  if letter.upper() in value:
                      wordValue += key
      print("The value of your word is ",wordValue)
